@@ -1,9 +1,5 @@
 # PS Django
 
-<a href="https://gitmoji.dev">
-  <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
-</a>
-
 Sistema de processo seletivo escrito na linguagem python utilizando utilizando o framework Django.
 <hr>
 Projeto criado com o intutito de melhorar os conhecimentos do Framework Django
