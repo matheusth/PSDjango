@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import BaseUserManager, AbstractUser
+from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
 
 
 class CustomUserManager(BaseUserManager):
@@ -16,7 +16,6 @@ class CustomUserManager(BaseUserManager):
         user = self.model(
             fullname=fullname.upper(),
             email=email,
-            username=email
         )
         user.set_password(password)
         user.save(using=self._db)
@@ -50,8 +49,9 @@ class CustomUserManager(BaseUserManager):
         user.save(using=self._db)
 
 
-class CustomUser(AbstractUser):
+class CustomUser(AbstractBaseUser, PermissionsMixin):
     fullname = models.CharField(verbose_name='Nome completo', max_length=200)
+    password = models.CharField(verbose_name='Senha', max_length=36)
     objects = CustomUserManager()
     email = models.EmailField(
         verbose_name='E-mail',
