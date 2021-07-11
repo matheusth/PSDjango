@@ -1,13 +1,10 @@
 # PS Django
 
-Sistema de processo seletivo escrito na linguagem python utilizando utilizando o framework Django.
-<hr>
-Projeto criado com o intutito de melhorar os conhecimentos do Framework Django
-adiquirido durante cursos.
+Sistema de processo seletivo escrito na linguagem python utilizando utilizando o framework Django. Projeto criado com o
+intutito de melhorar os conhecimentos do Framework Django adiquirido durante cursos.
 
 ## Features do projeto
 
-<hr>
 Features a serem implementatas:
 
 * **Usuário**:
@@ -21,8 +18,6 @@ Features a serem implementatas:
 _mais fetures serão adcionadas quando as features acima forem implementadas._
 
 ## Como rodar o sistema
-
-<hr>
 
 ### Requisitos
 
