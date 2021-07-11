@@ -1,0 +1,45 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    gap: 0.5rem;
+}
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #CECECE;
+    transition: 400ms all;
+}
+
+input:focus {
+    box-shadow: 0 0 10px 1px dodgerblue;
+
+    outline: none;
+}
+
+input[type='text'], input[type='email'], input[type='password'] {
+    height: 50px;
+
+}
+
+input.send-button {
+    height: 50px;
+    align-self: center;
+    width: 100%;
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 400ms all;
+}
+
+input.send-button:hover {
+    background-color: dodgerblue;
+    transform: scale(1.05);
+}

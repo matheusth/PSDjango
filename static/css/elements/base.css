@@ -1,0 +1,22 @@
+body {
+    background: #DEDEDE;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40vw;
+    background: #FEFEFE;
+}
+
+.main-title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 36px;
+}

@@ -4,17 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/global/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/elements/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/elements/form.css' %}">
 </head>
 <body>
 <div class="container">
-    <main class="col-6 offset-3 align-self-center">
-        <h1 class="text-center">Login</h1>
-        <form action="/auth" method="post" class="col-6 offset-3">
-            {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="Submit">
-        </form>
+    <main>
+        <h1 class="main-title">Login</h1>
+            <form action="/auth" method="post" class="col-6 offset-3" autocomplete="off">
+                {% csrf_token %}
+                {{ form }}
+                <input class="send-button" type="submit" value="Submit">
+            </form>
     </main>
 </div>
 </body>
