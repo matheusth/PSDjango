@@ -10,6 +10,11 @@
 <div class="container">
     <main class="col-6 offset-3 align-self-center">
         <h1 class="text-center">Login</h1>
+        <form action="/auth" method="post" class="col-6 offset-3">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit">
+        </form>
     </main>
 </div>
 </body>

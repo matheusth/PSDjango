@@ -1,9 +1,14 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 
+from users.forms import LoginForm
+
 
 def index(request):
-    return render(request, 'home.html')
+    context = {
+        'form': LoginForm()
+    }
+    return render(request, 'home.html', context)
 
 
 def auth_user(request):
@@ -19,4 +24,4 @@ def auth_user(request):
 
 
 def dashboard(request):
-    return render(request, 'home.html')
+    return render(request, 'dashboard.html')
