@@ -11,9 +11,10 @@ class TestUserViews(TestCase):
     def test_registered_user_should_be_able_to_authenticate(self):
         email = 'test_auth@teste.com'
         password = 'teste1234#'
-        CustomUser.objects.create_user(fullname='Python 3', email='teste_auth@teste.com', password='teste1234#')
+        CustomUser.objects.create_user(fullname='Python 3', email=email, password=password)
         response = self.client.post('/auth', {
             'email': email,
             'password': password
         })
         self.assertRedirects(response, '/dashboard')
+        self.assertIn('_auth_user_id', self.client.session)
